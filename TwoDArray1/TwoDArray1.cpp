@@ -25,7 +25,7 @@ void main() {
 
 	cout << "Multiplication Table from 0 to " << MAXROWS - 1 << endl << endl;
 
-	cout << " " << setfill('-') << setw(COLWIDTH * (MAXROWS+6)) << " " << endl;
+	cout << " " << setfill('-') << setw(COLWIDTH * (MAXROWS + 6)) << " " << endl;
 
 
 	for (size_t i = 0; i < MAXROWS; i++)
@@ -43,4 +43,27 @@ void main() {
 	}
 
 	cout << " " << setfill('-') << setw(COLWIDTH * (MAXROWS + 6)) << " " << endl;
+
+	int sum = 0;
+
+	cout << "Sum of the tables" << endl;
+
+	cout << setfill(' ') << " |";
+
+	for (size_t i = 0; i < MAXROWS; i++)
+	{
+
+
+		sum = 0;
+
+		for (size_t j = 0; j < MAXCOLS; j++)
+		{
+			sum += MultTAble[i][j];
+		}
+
+		cout << setw(COLWIDTH) << sum << " ";
+
+	}
+	cout << "|";
+
 }
